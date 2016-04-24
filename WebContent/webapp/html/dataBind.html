@@ -2,12 +2,16 @@
 
 myName = {{myName}}
 </br>
-<input type="button" ng-click="change()" value="change myName to bbb"/>
-<!-- 当myName等于tank时 取class的值为aaa -->
-<div ng-class="{'aaa':myName == 'tank'}"></div>
+
+<input type="button" ng-click="change()" value="change myName to tank"/>
+
+<!-- 当myName等于tank时 取class的值为 hi-class  -->
+<div ng-class="{'hi-class':myName == 'tank'}"></div>
 </br>
+
 <input type="button" value="Get Data" ng-click="getData()"/>
 </br></br>
-<input ng-model="number" ng-change="checkNumber()"/>
+
+请输入数字: <input ng-model="number" ng-change="checkNumber()"/>
 <span style="color:red">{{errorMesg}}</span>
 

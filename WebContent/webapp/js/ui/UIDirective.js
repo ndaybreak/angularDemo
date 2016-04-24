@@ -2,14 +2,14 @@
 app.directive("hello",function(){
 	return{
 			restrict:'E',
-			template:'<h4>Hello AngularJS</h4>',    
+			template:'<h5>Hello AngularJS</h5>',    
 			trunsclude:false,
 			replace:false,
-			scope:{},// add attribute scope, directive will has own scope which extend parent scope
+			scope:{},// 添加scope属性后，该指令将会拥有自己的scope,同时会继承该指令所在的scope
 //			compile 与 link 函数不能同时出现，同时出现时只有compile函数有作用
 //			compile:function(){},//$compile 函数处理时调用指令的compile函数来改变dom结构
 			link:function(scope,element,attrs){//将模板的scope与模板关联
-				console.log('scope');
+				console.log('child scope');
 				console.log(scope);
 			}
 	};

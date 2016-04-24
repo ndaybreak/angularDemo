@@ -1,11 +1,11 @@
 function dataBindCtrl($scope, AdminService, check){
-	$scope.myName = 'aaa';
+	$scope.myName = 'xxxx';
 	
 	$scope.$watch('myName',function(newVal,oldVal){
 		console.log(newVal);
 	});
 	$scope.change = function(){
-		$scope.myName = 'bbb';
+		$scope.myName = 'tank';
 	};
 	
 	$scope.getData = function(){
