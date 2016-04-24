@@ -1,0 +1,13 @@
+<h3>Data Binding</h3>
+
+myName = {{myName}}
+</br>
+<input type="button" ng-click="change()" value="change myName to bbb"/>
+<!-- 当myName等于tank时 取class的值为aaa -->
+<div ng-class="{'aaa':myName == 'tank'}"></div>
+</br>
+<input type="button" value="Get Data" ng-click="getData()"/>
+</br></br>
+<input ng-model="number" ng-change="checkNumber()"/>
+<span style="color:red">{{errorMesg}}</span>
+
