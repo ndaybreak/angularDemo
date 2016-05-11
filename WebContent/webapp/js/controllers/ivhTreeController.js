@@ -1,7 +1,24 @@
 function ivhTreeCtrl($scope) {
-	$scope.name = 'xiaochi';
-	$scope.stuff = [{
-	    label: 'Suitcase',
-	    children: [ {label: 'xxxx'}, {label: 'yyyy'}, {label: 'zzzz'} ]
+	$scope.bag = [{
+	      label: 'Glasses',
+	      value: 'glasses',
+	      children: [{
+	        label: 'Top Hat',
+	        value: 'top_hat'
+	      },{
+	        label: 'Curly Mustache',
+	        value: 'mustachio'
+	      }]
 	  }];
+
+	$scope.awesomeCallback = function(node, tree) {
+	    console.log(node)
+	    console.log(tree)
+	  };
+
+	  $scope.otherAwesomeCallback = function(node, isSelected, tree) {
+	    console.log(node)
+	    console.log(isSelected)
+	    console.log(tree)
+	  }
 };
