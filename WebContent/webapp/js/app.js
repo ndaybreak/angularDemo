@@ -1,4 +1,4 @@
-var app = angular.module('myApp', [ 'ngRoute', 'DataServiceModule', 'SharedServiceModule', 'ServiceTestModule']);
+var app = angular.module('myApp', [ 'ngRoute', 'DataServiceModule', 'SharedServiceModule', 'ServiceTestModule', 'ivh.treeview']);
 
 app.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider
@@ -17,6 +17,9 @@ app.config([ '$routeProvider', function($routeProvider) {
 		.when('/serviceTest', {
 			templateUrl : 'html/service.html',
 			controller : ["$scope", "factory", "service", "provider", serviceCtrl]})
+		.when('/ivhTreeTest', {
+			templateUrl : 'html/ivhTree.html',
+			controller :  ivhTreeCtrl})
 		.otherwise({
 			redirectTo : '/'
 		});
